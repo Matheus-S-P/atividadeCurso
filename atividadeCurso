@@ -1,0 +1,283 @@
+ALUNO: Matheus de Souza Pinto
+TURMA: 2M
+
+
+Faça um programa que verifique (usando if e else) se uma letra digitada é vogal ou consoante
+
+Algoritmo "Verificador de VOGAL e CONSOANTE"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : 
+// Descrição   : Verifica se a letra digitada e VOGAL ou CONSOANTE
+// Autor(a)    : Matheus de Souza Pinto
+// Data atual  : 18/11/2022
+Var
+   // Seção de Declarações das variáveis
+   v1,v2,v3,v4,v5, ltr: caractere
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   v1 <- "a"
+   v2 <- "e"
+   v3 <- "i"
+   v4 <- "o"
+   v5 <- "u"
+
+   escreval(" Seja bem vindo estudante ou professor, este e um simples programa ")
+   escreval("que verifica se a letra digitada e CONSOANTE ou VOGAL")
+   escreval("")
+   escreval("OBS:(Por favor digite apenas uma letra, e que esteja minuscula!")
+   escreval("")
+   escreval("")
+   escreva("Digite uma letra: ")
+
+   leia(ltr)
+
+   escreval("")
+   se (ltr = v1) ou (ltr = v2) ou (ltr = v3) ou (ltr = v4) ou (ltr = v5) entao
+      escreval("|------------------------|")
+      escreval("| Esta letra e uma VOGAL |")
+      escreval("|------------------------|")
+   senao
+      escreval("|----------------------------|")
+      escreval("| Esta letra e uma CONSOANTE |")
+      escreval("|----------------------------|")
+   fimse
+
+
+
+Fimalgoritmo
+
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+Faça um programa que leia três números e mostre-os em ordem decrescente
+
+Algoritmo "Programa que ordena 3 numeros em ordem descrescente"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Lê 3 numeros e os coloca em ordem decrescente
+// Autor(a)    : Matheus de Souza Pinto
+// Data atual  : 18/11/2022
+Var
+   // Seção de Declarações das variáveis
+   alg1, alg2, alg3, menor, meio, maior: inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("Digite 3 numeros diferentes que iremos coloca-los em")
+   escreval("ordem decrescente")
+   escreval("")
+   escreva("Escolha o primero numero: ")
+   leia(alg1)
+   escreval("")
+   escreva("Escolha o segundo numero: ")
+   leia(alg2)
+   escreval("")
+   escreva("Escolha o terceiro numero: ")
+   leia(alg3)
+   escreval("")
+
+   se (alg1 < alg2) e (alg1 < alg3) entao
+      menor <- alg1
+
+      se alg2 < alg3 entao
+         meio <- alg2
+         maior <- alg3
+      senao
+         meio <- alg3
+         maior <- alg2
+      fimse
+   fimse
+
+   se (alg2 < alg1) e (alg2 < alg3) entao
+      menor <- alg2
+
+      se alg1 < alg3 entao
+         meio <- alg1
+         maior <- alg3
+      senao
+         meio <- alg3
+         maior <-alg1
+      fimse
+   fimse
+
+   se (alg3 < alg2) e (alg3 < alg1) entao
+      menor <- alg3
+
+      se alg1 < alg2 entao
+         meio <- alg1
+         maior <- alg2
+      senao
+         meio <- alg2
+         maior <- alg1
+      fimse
+   fimse
+   escreval("")
+   escreval("RESULTADO: ", maior," -> ", meio," -> ", menor)
+
+
+Fimalgoritmo
+
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+Faça um script que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
+
+Algoritmo "Digita uma data e avalia se a mesma e uma data válida"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Digita uma data e avalia se a mesma e válida
+// Autor(a)    : Matheus de Souza Pinto
+// Data atual  : 18/11/2022
+Var
+   // Seção de Declarações das variáveis
+   Dia,Mes,Ano: inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("Digite uma data e iremos verificar se esta data e VÁLIDA ou INVÁLIDA")
+   escreval("")
+   escreva("Dia: ")
+   leia(Dia)
+   limpatela
+   escreva(Dia,"/ Mes: ")
+   leia(Mes)
+   limpatela
+   escreva(Dia,"/", Mes,"/Ano: ")
+   leia(Ano)
+   limpatela
+   escreval(Dia,"/", Mes,"/", Ano)
+   escreval("")
+   escreval("VERIFICANDO...")
+   escreval("")
+   se (Dia > 31) ou (Dia < 1) ou (Mes < 1) ou (Mes > 12) ou (Ano < 1000) ou (Ano > 9999) entao
+   escreval("Esta data e INVÁLIDA")
+   senao
+   escreval("Esta data e VÁLIDA")
+FIMSE
+
+Fimalgoritmo
+
+
+
+
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+Faça um script que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+Algoritmo "Registra seu turno"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Verifica em que turno voce estuda
+// Autor(a)    : Matheus de Souza Pinto
+// Data atual  : 18/11/2022
+Var
+   // Seção de Declarações das variáveis
+   ltr, nome:caractere
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Primeiramente digite seu nome: ")
+   leia(nome)
+   escreval("")
+   escreval("Tudo bem ", nome,"? Aqui voce devera nos informar em que turno")
+   escreval("voce estuda")
+   escreval("")
+   escreval("Escolha uma das opções a baixo: ")
+   escreval("")
+   escreval("|----------------|")
+   escreval("| M - Matutino   |")
+   escreval("| V - Vespertino |")
+   escreval("| N - Noturno    |")
+   escreval("|----------------|")
+   escreval("")
+   escreval("(OBS: Escreva em letra MAIUSCULA)")
+   escreval("")
+   escreva("Digite uma opção: ")
+   leia(ltr)
+   escreval("")
+   enquanto (ltr <> "M") e (ltr <> "V") e (ltr <> "N") faca
+      escreval("!!  OPÇÃO INVALIDA   !!")
+      escreval("!! ESCOLHA NOVAMENTE !!")
+      escreval("")
+      escreva("Digite uma opção: ")
+      leia(ltr)
+      escreval("")
+   fimenquanto
+fimescolha
+escolha ltr
+
+caso "M"
+   escreval("BOM DIA!!")
+   escreval("Foi registrado que o aluno ", nome," esta no turno MATUTINO")
+caso "V"
+   escreval("BOA TARDE!!")
+   escreval("Foi registrado que o aluno ", nome," esta no turno VESPERINO")
+caso "N"
+   escreval("BOA NOITE!!")
+   escreval("Foi registrado que o aluno ", nome," esta no turno NOTURNO")
+fimescolha
+
+
+Fimalgoritmo
+
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+//Crie um enunciado e elabore um algoritmo para o mesmo. Esse deve ter uma formula matematica, fisica, financeira, etc.
+
+Algoritmo "Quantos anos voce tem hein????" 4
+//Nome aluno: Matheus de Souza Pinto
+//descrição: Este programa calcula sua idade e diz se voce ja fez aniversario ou nao
+
+Var
+   somaAno,somaAno2 , somaDia, somaMes, anoAtual, anoNasc, mesAtual, mesNasc, diaAtual, diaNasc: real
+   nome: caractere
+
+Inicio
+   escreva("Ola, antes de tudo, digite seu nome: ")
+   leia(nome)
+   limpatela
+   escreval("Nesse programa vamos calcular sua idade com base")
+   escreval("na sua data de aniversario e a data atual")
+   escreval("Primeiramente nos informe sua DATA DE NASCIMENTO ", nome)
+   escreval("")
+   escreval("DATA DE NASCIMENTO: ")
+   escreval("Dia:")
+   leia(diaNasc)
+   limpatela
+   escreval(diaNasc,"/ Mes :")
+   leia(mesNasc)
+   limpatela
+   escreval(diaNasc,"/",mesNasc,"/ Ano:")
+   leia(anoNasc)
+   limpatela
+   escreval(diaNasc,"/",mesNasc,"/",anoNasc)
+   escreval("")
+   escreval("Agora que sabemos sua DATA DE NASCIMENTO...")
+   escreval("Voce deve escrever a DATA ATUAL:")
+   escreval("")
+   escreva("Dia Atual:")
+   leia(diaAtual)
+   limpatela
+   escreva(diaAtual,"/ Mes Atual:")
+   leia(mesAtual)
+   limpatela
+   escreva(diaAtual,"/",mesAtual,"/ Ano Atual:")
+   leia(anoAtual)
+   limpatela
+   escreval(diaAtual,"/",mesAtual,"/",anoAtual)
+   escreval("")
+   somaAno <- ((anoAtual * 365) - (anoNasc * 365))
+   somaAno2 <- (somaAno - 365)/ 365
+
+   se (mesAtual = mesNasc) e (diaAtual >= diaNasc) entao
+      escreval("Parabens ", nome," , voce ja fez aniversario esse ano!")
+      escreval("Voce tem ", somaAno2 + 1," anos")
+   senao
+      se mesAtual > mesNasc entao
+         escreval("Parabens ", nome," ,voce ja fez aniversario esse ano!")
+         escreval("Voce tem ", somaAno2 + 1," anos")
+      senao
+         escreval("Voce ainda nao fez aniversario esse ano ", nome )
+         escreval("Voce tem ", somaAno2 ," anos")
+      fimse
+   fimse
+Fimalgoritmo
